@@ -1,0 +1,57 @@
+.header
+  background-color: $main-bg
+  padding-top: 25px
+  padding-bottom: 25px
+  &-wrap
+    display: flex
+    justify-content: space-between  
+    align-items: center
+  &-logo
+    color: $white-color
+    &__text
+      +bold
+      font-size: 20px
+  &-timeWork
+    text-align: center
+    color: $white-color
+    &__time
+      font-size: 12px
+  &-info
+    display: flex
+    justify-content: center
+    align-items: center
+    &__link
+      display: block
+      margin-bottom: 14px
+      margin-right: 20px
+      color: $white-color
+      font-size: 18px
+      text-decoration: none
+      +bold
+      &:last-child
+        margin-bottom: 0
+@media screen and ( max-width: 768px )
+  .header
+    &-timeWork
+      display: none
+    &-info
+      &__link
+        font-size: 14px
+      &__button
+        width: 160px
+        height: 40px
+        line-height: 40px
+@media screen and ( max-width: 575.98px )
+  .header
+    &-info
+      &__phone
+        display: none
+@media screen and ( max-width: 360.98px )
+  .header
+    &-wrap
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &-logo
+      margin-bottom: 15px
+
