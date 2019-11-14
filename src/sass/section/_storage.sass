@@ -1,0 +1,23 @@
+.storage
+  background-color: $section-bg
+  &-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: nowrap
+  &-card
+    flex-basis: 33.33%
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
+@media (max-width: 575.98px)
+  .storage
+    &-wrap
+      flex-wrap: wrap
+    &-card
+      text-align: center
+      flex-basis: 100%
+      margin-bottom: 30px
+      margin-right: 0
+      &:last-child
+        margin-bottom: 0
