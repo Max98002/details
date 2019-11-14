@@ -1,0 +1,38 @@
+.guarantees
+  &__title
+    color: $black-color
+    max-width: 580px
+    margin: auto
+    margin-bottom: 60px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+  &-card
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    text-align: center
+    flex-basis: 33%
+    min-height: 372px
+    &__image
+      min-height: 300px
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-bottom: 30px
+      &-k
+        border: 20px solid #e1e1e1
+    &__text
+      max-width: 283px
+      color: $black-color
+      font-size: 16px
+@media (max-width: 991.98px)
+  .guarantees
+    &-card
+      flex-basis: 100%
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
