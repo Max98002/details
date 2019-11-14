@@ -11,6 +11,7 @@ button
 body
   +reg
   font-size: 16px
+  background-color: $body-color
 .button
   display: block
   width: 170px
@@ -23,3 +24,36 @@ body
   text-decoration: none
   +bold
   font-size: 12px
+.section
+  padding-top: 60px
+  padding-bottom: 60px
+@media (max-width: 991.98px)
+  .section
+    padding-top: 45px
+    padding-bottom: 45px
+@media (max-width: 575.98px)
+  .section
+    padding-top: 25px
+    padding-bottom: 25px
+.input
+  padding: 20px 40px 20px 20px
+  width: 100%
+  color: #818181
+  font-size: 13px
+  border: none
+  background-color: darken($input-color, 10%)
+  &__group
+    position: relative
+    width: 49%
+  &__image
+    position: absolute
+    right: 15px
+    top: 50%
+    transform: translateY(-50%)
+@media (max-width: 575.98px)
+  .input
+    &__group
+      width: 100%
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0
