@@ -8,10 +8,13 @@ input,
 a,
 button
   outline: none
+input[placeholder]
+  text-overflow: ellipsis
 body
   +reg
   font-size: 16px
   background-color: $body-color
+  margin-bottom: 50px
 .button
   display: block
   width: 170px
@@ -20,10 +23,17 @@ body
   text-align: center
   cursor: pointer
   color: $white-color
+  border: none
   background-color: $blu-color
   text-decoration: none
   +bold
   font-size: 12px
+  &-up
+    width: 30px
+    height: 30px
+    border: none
+    background: url('../img/drop-up-arrow.svg') no-repeat center center / cover
+    cursor: pointer
 .section
   padding-top: 60px
   padding-bottom: 60px
@@ -81,3 +91,24 @@ body
       margin-bottom: 15px
       &:last-child
         margin-bottom: 0
+.error
+  border: 1px solid red
+div.error
+  position: absolute
+  bottom: -12px
+  left: 50%
+  transform: translateX(-50%)
+  font-size: 12px
+  color: red
+  border: none
+  width: 100%
+  text-align: center
+
+.arrowUp
+  position: fixed
+  bottom: 0
+  right: 0
+  text-align: center
+  width: 100%
+  padding: 10px
+  background-color: $black-color

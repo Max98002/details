@@ -72,24 +72,26 @@
     <section class="section price">
       <h2 class="price__title">Получите прайс прямо сейчас на электронную почту!</h2>
       <!-- /.section-title price__title -->
-      <form action="#" class="form form-price">
+      <form action="#" class="form form-price" id="form__price">
         <div class="col-100">
           <div class="input__group">
-            <input type="text" class="input form-price__input" placeholder="ВВЕДИТЕ ВАШ E-MAIL">
+            <input type="text" class="input form-price__input" name="email" placeholder="ВВЕДИТЕ ВАШ E-MAIL"
+              autocomplete="off">
             <img src="./img/price/email.png" class="input__image" alt="">
           </div>
           <div class="input__group">
-            <input type="text" class="input form-price__input" placeholder="Введите ваш телефон">
+            <input type="text" class="input form-price__input" name="phone" id="phone" placeholder="Введите ваш телефон"
+              autocomplete="off">
             <img src="./img/price/call.png" class="input__image" alt="">
           </div>
         </div>
         <!-- /.col-100 -->
-        <div class="col-100">
+        <div class="col-100 col-100_mod">
           <div class="form-price__info">
             <span class="form-price__text">Прайс придет к Вам на почту в течение 5 минут! </span>
             <img src="./img/price/clock.png" alt="" class="form-price__image">
           </div>
-          <a href="#" class="button form-price__button">Получить прайс</a>
+          <button href="#" class="button form-price__button" type="submit">Получить прайс</button>
         </div>
         <!-- /.col-100 -->
       </form>
@@ -262,7 +264,139 @@
       <!-- /.storage-wrap -->
     </section>
     <!-- /.section storage -->
+    <section class="section service">
+      <h2 class="section-title section__title service__title">У нас в штате есть мобильные бригады, готовые выехать на
+        сервисное обслуживание, ремонт и проведение диагностики!</h2>
+      <!-- /.section-title section__title -->
+      <div class="service-wrap">
+        <div class="service-card">
+          <div class="service-card__image">
+            <img src="./img/service/delivery.png" alt="">
+          </div>
+          <!-- /.service-card__image -->
+          <div class="service-card__text">Организуем выезд специалистов
+            в течение двух дней
+          </div>
+          <!-- /.service-card__text -->
+        </div>
+        <!-- /.service-card -->
+        <div class="service-card">
+          <div class="service-card__image">
+            <img src="./img/service/toolbox.png" alt="">
+          </div>
+          <!-- /.service-card__image -->
+          <div class="service-card__text">Бригады укомплектованы всем необходимым оборудованием для производства работ
+            любой сложности</div>
+          <!-- /.service-card__text -->
+        </div>
+        <!-- /.service-card -->
+        <div class="service-card">
+          <div class="service-card__image">
+            <img src="./img/service/certificate.png" alt="">
+          </div>
+          <!-- /.service-card__image -->
+          <div class="service-card__text">Все специалисты проходят обучение и ежегодную аттестацию</div>
+          <!-- /.service-card__text -->
+        </div>
+        <!-- /.service-card -->
+      </div>
+      <!-- /.service-wrap -->
+    </section>
+    <!-- /.section service -->
+    <section class="section consultation">
+      <h2 class="section-title section__title consultation__title">Если Вам необходима бесплатная консультация по
+        вопросу обслуживания</h2>
+      <!-- /.section-title section__title -->
+      <div class="consultation-wrap">
+        <div class="consultation__phone">
+          <span class="consultation__text">Звоните нам по телефону:</span>
+          <!-- /.consultation__text -->
+          <a href="tel:0680811952" class="consultation__link">+38 (068) 08-119-52</a>
+        </div>
+        <!-- /.consultation-block__phone -->
+        <form action="#" class="form consultation-form" id="consultation__form">
+          <div class="col-100 consultation__col-100">
+            <div class="input__group input__group_consultation">
+              <input type="tel" class="input consultation__input" name="userphone" id="userphone"
+                placeholder="Введите ваш телефон" autocomplete="off">
+              <img src="./img/price/call.png" class="input__image" alt="">
+            </div>
+            <button class="button consultation__button" type="submit">Перезвонить сейчас</button>
+          </div>
+        </form>
+      </div>
+      <!-- /.consultation-wrap -->
+    </section>
+    <!-- /.section consultation -->
+    <div class="location">
+      <h2 class="section-title section__title location__title">Приезжайте в наш офис!</h2>
+      <!-- /.section-title section__title -->
+      <div class="map" id="map">
+        <!-- lazy load map from main  -->
+      </div>
+      <!-- /.map -->
+    </div>
+    <!-- /.section location -->
   </main>
+
+  <footer class="footer">
+    <div class="header-wrap">
+      <div class="header-logo">
+        <span class="header-logo__text">Details CAT</span>
+      </div>
+      <!-- /.header-logo -->
+      <div class="header-timeWork">
+        <span class="header-timeWork__time"> <strong>c 9:00 до 21:00 </strong> <br> без выходных</span>
+      </div>
+      <!-- /.header-timeWork -->
+      <div class="header-info">
+        <div class="header-info__phone">
+          <a href="tel:0680811952" class="header-info__link">+38(068) 08-119-52</a>
+          <a href="tel:0630236106" class="header-info__link">+38(063) 02-361-06</a>
+        </div>
+        <a href="#" class="button header-info__button">Заказать звонок</a>
+      </div>
+      <!-- /.header-info -->
+    </div>
+    <!-- /.header-wrap -->
+  </footer>
+  <!-- /.footer -->
+
+  <div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-block">
+        <h2 class="section-title section__title modal-block__title">Заказать звонок</h2>
+        <form action="#" class="form consultation-form" id="modal__form">
+          <div class="col-100 modal-block__col-100">
+            <div class="input__group input__group_consultation">
+              <input type="tel" class="input consultation__input" name="userphone" id="userphone"
+                placeholder="Введите ваш телефон" autocomplete="off">
+              <img src="./img/price/call.png" class="input__image" alt="">
+            </div>
+            <button class="button consultation__button" type="submit">Перезвонить сейчас</button>
+          </div>
+        </form>
+        <button class="modal-close" id="close"></button>
+      </div>
+      <!-- /.modal-block -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <div class="arrowUp">
+    <button class="button-up"></button>
+  </div>
+  <!-- /.arrowUp -->
+
+  <!-- script jquery-3 -->
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <!-- jquery-3 validate form -->
+  <script src="./js/jquery.validate.min.js"></script>
+  <!-- jquery-3 maske input -->
+  <script src="./js/jquery.maskedinput.min.js"></script>
+  <!-- main js -->
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
