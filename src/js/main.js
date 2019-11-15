@@ -137,7 +137,7 @@ $(document).ready(function () {
 
   // arrowUp
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 800) {
+    if ($(this).scrollTop() > 2000) {
       $('.arrowUp').fadeIn();
     } else {
       $('.arrowUp').fadeOut();
